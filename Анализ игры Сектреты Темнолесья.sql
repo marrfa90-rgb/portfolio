@@ -72,7 +72,6 @@ FROM item_count AS ic
 JOIN fantasy.items AS i ON ic.item_code = i.item_code
 ORDER BY ic.transaction_count DESC, perc_transactions DESC, perc_users DESC;
 
--- Часть 2. Решение ad hoc-задачbи
 -- Задача: Зависимость активности игроков от расы персонажа:
 WITH count_users_race AS (
     SELECT race_id,
